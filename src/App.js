@@ -13,6 +13,7 @@ import Contact from "./Pages/Contact/Contact";
 import News from "./Pages/News_News/News";
 import Explore from "./Pages/Explore/Explore";
 import Update from "./Pages/Dashborad/MangeProduct/Update/Update";
+import NotFound from "./Pages/NotFound/NotFound";
 function App() {
   return (
     <AuthProvider>
@@ -56,6 +57,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>
