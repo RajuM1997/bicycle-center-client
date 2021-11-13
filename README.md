@@ -1,6 +1,7 @@
 ## Bicycle Center
 - live web site link: https://bicycle-center.web.app/
-
+## 24/7 service
+- we provide non stop bicycle service over the years
 ## e-Booking
 - we have e-service company services
 
