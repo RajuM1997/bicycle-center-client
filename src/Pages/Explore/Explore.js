@@ -8,7 +8,7 @@ const Explore = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://pacific-beach-63189.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setProducts(data));
     setLoading(false);

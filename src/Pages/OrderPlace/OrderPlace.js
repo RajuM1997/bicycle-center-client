@@ -16,7 +16,7 @@ const OrderPlace = () => {
   const [result, setResult] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://pacific-beach-63189.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSingleProduct(data);
@@ -34,7 +34,7 @@ const OrderPlace = () => {
       status: status,
     };
     console.log(orderData);
-    fetch(`http://localhost:5000/order`, {
+    fetch(`https://pacific-beach-63189.herokuapp.com/order`, {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(orderData),

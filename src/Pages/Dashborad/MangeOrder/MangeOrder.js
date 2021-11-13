@@ -11,7 +11,7 @@ const MangeProduct = () => {
   const [Loading, setLoading] = useState(true);
   const [orderId, setOrderId] = useState("");
   useEffect(() => {
-    fetch(`http://localhost:5000/order`)
+    fetch(`https://pacific-beach-63189.herokuapp.com/order`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -27,7 +27,7 @@ const MangeProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch(`http://localhost:5000/statusUpdate/${orderId}`, {
+    fetch(`https://pacific-beach-63189.herokuapp.com/statusUpdate/${orderId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -42,7 +42,7 @@ const MangeProduct = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("are you sure, delete this package?");
     if (proceed) {
-      fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      fetch(`https://pacific-beach-63189.herokuapp.com/deleteOrder/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

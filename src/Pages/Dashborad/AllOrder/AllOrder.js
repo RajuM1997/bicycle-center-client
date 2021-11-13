@@ -8,7 +8,7 @@ const AllOrder = () => {
   const [Loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrder`)
+    fetch(`https://pacific-beach-63189.herokuapp.com/myOrder`)
       .then((res) => res.json())
       .then((data) => {
         setMyOrder(data);
@@ -20,7 +20,7 @@ const AllOrder = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("are you sure, delete this package?");
     if (proceed) {
-      fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      fetch(`https://pacific-beach-63189.herokuapp.com/deleteOrder/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

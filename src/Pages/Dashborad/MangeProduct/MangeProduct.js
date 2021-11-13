@@ -9,7 +9,7 @@ const MangeProduct = () => {
   const [isDelete, setIsDelete] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://pacific-beach-63189.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setProducts(data));
     setLoading(false);
@@ -19,7 +19,7 @@ const MangeProduct = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("are you sure, delete this package?");
     if (proceed) {
-      fetch(`http://localhost:5000/product/${id}`, {
+      fetch(`https://pacific-beach-63189.herokuapp.com/product/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
