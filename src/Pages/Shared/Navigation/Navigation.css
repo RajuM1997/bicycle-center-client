@@ -1,0 +1,28 @@
+body{
+    overflow-x: hidden;
+}
+
+.user-img {
+    width: 60px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.logo_img{
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.custome-bg {
+    background: rgba(0, 0, 0, 0.945);
+}
+.nav_link{
+    font-size: 16px;
+    transition: all 0.5s !important;
+    font-weight: 500;
+}
+.nav_link:hover{
+    color: red !important;
+    font-weight: 500;
+}

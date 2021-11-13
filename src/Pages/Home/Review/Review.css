@@ -1,0 +1,38 @@
+/* testimonial img and icon style here */
+body{
+    overflow-x: hidden;
+}
+.testimonial{
+    background: rgba(214, 147, 183, 0.685);
+}
+.testimonial h1 {
+    color: #000;
+}
+
+.testimonial .card {
+    background: rgba(96, 64, 155, 0.787) !important;
+    color: rgb(246, 245, 245);
+    /* backdrop-filter: blur(10px); */
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.testimonial .card:hover {
+    transform: translateY(10px);
+    color: #fff;
+    box-shadow: 6px 6px 7px rgba(128, 128, 128, 0.787);
+}
+
+.testimonial .card img {
+
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding-top: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-icon .fa-star{
+    color: rgb(246, 181, 1);
+}

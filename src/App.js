@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AuthProvider from "./context/AuthProvider/AuthProvider";
+import Home from "./Pages/Home/Home/Home";
+import Login from "./Pages/Login/Login/Login";
+import Register from "./Pages/Login/Register/Register";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import Dashboard from "./Pages/Dashborad/DashBoard/Dashboard";
+import OrderPlace from "./Pages/OrderPlace/OrderPlace";
+import DashboardHome from "./Pages/Dashborad/DashboardHome/DashboardHome";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+import News from "./Pages/News_News/News";
+import Explore from "./Pages/Explore/Explore";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/news">
+            <News />
+          </Route>
+          <Route path="/explore">
+            <Explore />
+          </Route>
+          <PrivateRoute path="/orderPlace/:id">
+            <OrderPlace />
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/dashboardHome">
+            <DashboardHome />
+          </PrivateRoute>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

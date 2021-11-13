@@ -1,0 +1,20 @@
+
+.news .card {
+    cursor: pointer;
+}
+/*
+.news .card:hover {
+    transform: scale(1.01);
+    box-shadow: 10px 6px 7px rgba(128, 128, 128, 0.787);
+}
+
+.news .active {
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 10px 6px 7px rgba(128, 128, 128, 0.787);
+}
+ */
+
+.comment-icon .far {
+    color: rgb(184, 11, 11) !important;
+}

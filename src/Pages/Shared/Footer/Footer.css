@@ -1,0 +1,58 @@
+.footer{
+    background: #151320;
+    color: #fff;
+}
+
+.service h6{
+    font-weight: 400;
+    transition: all 0.5s;
+    cursor: pointer;
+    
+}
+.service h6:hover{
+    transform: translate(10px);
+}
+.icon span{
+    margin-right: 20px;
+}
+.icon span .fab{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+}
+.icon span .fab:hover{
+    transform: translateY(-7px);
+}
+
+.icon span .facebook{
+    background: #3D40CB;
+}
+.icon span .youtube{
+    background: #FD0136;
+}
+.icon span .twitter{
+    background: #00AEEF;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .about p{
+        font-size: 1.2rem;
+    }
+    .service{
+        text-align: center !important;
+    }
+    .service h4{
+        font-size: 1.6rem;
+    }
+    .service h6{
+        font-size: 1.3rem;
+    }
+}

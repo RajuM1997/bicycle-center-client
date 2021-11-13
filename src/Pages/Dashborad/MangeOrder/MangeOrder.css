@@ -1,0 +1,17 @@
+.delete-btn{
+    padding: 5px 8px;
+    background: rgb(155, 0, 0) !important;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.update-btn{
+    padding: 5px 8px;
+    background: rgb(2, 77, 27) !important;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
