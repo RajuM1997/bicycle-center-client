@@ -12,6 +12,7 @@ import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import News from "./Pages/News_News/News";
 import Explore from "./Pages/Explore/Explore";
+import Update from "./Pages/Dashborad/MangeProduct/Update/Update";
 function App() {
   return (
     <AuthProvider>
@@ -38,8 +39,14 @@ function App() {
           <PrivateRoute path="/orderPlace/:id">
             <OrderPlace />
           </PrivateRoute>
+          <PrivateRoute path="/orderPlace/:id">
+            <OrderPlace />
+          </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/update">
+            <Update />
           </PrivateRoute>
           <PrivateRoute path="/dashboardHome">
             <DashboardHome />

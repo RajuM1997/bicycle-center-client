@@ -5,7 +5,7 @@ import Banner from "../Banner/Banner";
 import Offer from "../Offer/Offer";
 import Product from "../Product/Product";
 import Review from "../Review/Review";
-import Team from "./Team/Team";
+import Team from "../Team/Team";
 
 const Home = () => {
   return (

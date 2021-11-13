@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardGroup, Col, Container, Row, Spinner } from "react-bootstrap";
 import Rating from "react-rating";
+import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
 const MangeProduct = () => {
@@ -42,18 +43,18 @@ const MangeProduct = () => {
         <Row lg={3} xs={1} className="g-4">
           {!loading ? (
             products.map((items) => (
-              <Col key={items._id}>
+              <Col key={items?._id}>
                 <CardGroup className="cardGroup">
                   <Card className="card">
                     <div className="card-img">
                       <img
                         className="card-image img-thumbnail"
-                        src={items.image}
+                        src={items?.image}
                         alt=""
                       />
                     </div>
                     <Card.Body>
-                      <Card.Title>{items.title}</Card.Title>
+                      <Card.Title>{items?.title}</Card.Title>
                     </Card.Body>
                     <Card.Body className="py-0 description">
                       <Card.Text>{items.description.slice(0, 90)}</Card.Text>
@@ -62,7 +63,7 @@ const MangeProduct = () => {
                       <Card.Body className=" mb-0 p-0">
                         <div className="product-icon">
                           <Rating
-                            initialRating={items.reveiw}
+                            initialRating={parseInt(items?.reveiw)}
                             emptySymbol="far fa-star"
                             fullSymbol="fas fa-star"
                             readonly
@@ -72,13 +73,15 @@ const MangeProduct = () => {
                     </Card.Body>
                     <Card.Body className="py-0">
                       <Card.Title>
-                        Price: <span className="price">${items.price}</span>
+                        Price: <span className="price">${items?.price}</span>
                       </Card.Title>
                     </Card.Body>
                     <Card.Footer className="card-footer mx-auto">
-                      <button className="update-btn">Updata</button>
+                      <Link to="/update">
+                        <button className="update-btn">Updata</button>
+                      </Link>
                       <button
-                        onClick={() => handleDelete(items._id)}
+                        onClick={() => handleDelete(items?._id)}
                         className="delete-btn ms-3"
                       >
                         Delete

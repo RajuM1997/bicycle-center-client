@@ -36,13 +36,13 @@ const Product = () => {
                       <Card.Title>{items.title}</Card.Title>
                     </Card.Body>
                     <Card.Body className="py-0 description">
-                      <Card.Text>{items.description.slice(0, 90)}</Card.Text>
+                      <Card.Text>{items.description.slice(0, 100)}</Card.Text>
                     </Card.Body>
                     <Card.Body>
                       <Card.Body className=" mb-0 p-0">
                         <div className="product-icon">
                           <Rating
-                            initialRating={items.review}
+                            initialRating={items?.reveiw}
                             emptySymbol="far fa-star"
                             fullSymbol="fas fa-star"
                             readonly

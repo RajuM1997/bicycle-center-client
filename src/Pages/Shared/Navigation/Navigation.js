@@ -28,9 +28,15 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/explore" className="text-white nav_link">
               Explore Now
             </Nav.Link>
-            <Nav.Link as={Link} to="/dashboard" className="text-white nav_link">
-              Dashboard
-            </Nav.Link>
+            {user.email && (
+              <Nav.Link
+                as={Link}
+                to="/dashboard"
+                className="text-white nav_link"
+              >
+                Dashboard
+              </Nav.Link>
+            )}
             <Nav.Link as={Link} to="/news" className="text-white nav_link">
               Blog
             </Nav.Link>
