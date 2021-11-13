@@ -1,4 +1,4 @@
-## Bicle Center
+## Bicycle Center
 - live web site link: https://bicycle-center.web.app/
 
 ## e-Booking
