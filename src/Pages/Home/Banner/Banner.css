@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Oswald:wght@400;500;600&display=swap');
+
 body{
     overflow-x: hidden;
+    
 }
 .banner{
     width: 100%;
@@ -18,7 +21,14 @@ body{
     color: #fff;
 }
 .banner-text h1{
-    font-size: 4rem;
+    font-size: 3.3rem;
+}
+.Typewriter__wrapper{
+    text-align: center;
+    text-transform: uppercase;
+    color: crimson;
+   font-family: 'Oswald', sans-serif;
+    font-weight: 500;
 }
 .bicycle{
     font-weight: 700;
@@ -61,4 +71,9 @@ body{
 }
 .common-btn:hover::after{
     height: 180%;
+}
+@media only screen and (max-width: 600px) {
+    .for{
+        text-align: center !important;
+    }
 }

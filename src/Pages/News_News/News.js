@@ -12,7 +12,7 @@ const News = () => {
         <Container>
           <div className="text-center">
             <h1 className="text-center title pb-5">
-              LATEST NEWS <br /> And Bloog
+              LATEST NEWS <br /> AND BLOG
             </h1>
           </div>
           <Row lg={3} xs={1} className="g-4">

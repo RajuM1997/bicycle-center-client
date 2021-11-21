@@ -10,7 +10,7 @@ const Offer = () => {
   let interval = useRef();
 
   const startTimer = () => {
-    const countDownDate = new Date("Dec 10 2021 00:00:00").getTime();
+    const countDownDate = new Date("Dec 10 2022 00:00:00").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
