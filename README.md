@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+## Bicycle Center
+- live web site link: https://bicycle-center.web.app/
+## 24/7 service
+- we provide non stop bicycle service over the years
+## e-Booking
+- we have e-service company services
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 50%off exclusive offer
+- through this website you will notify 50% off exclusive offer
+## updated news and services offer
+- we provide up to date bicycle related news and services offer
+## fastest and cheap bicycle cost
+- we provide fastest and cheap bicycle cost compare to other bicycle company
 
 ## Available Scripts
 
