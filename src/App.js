@@ -14,6 +14,7 @@ import News from "./Pages/News_News/News";
 import Explore from "./Pages/Explore/Explore";
 import Update from "./Pages/Dashborad/MangeProduct/Update/Update";
 import NotFound from "./Pages/NotFound/NotFound";
+import Footer from "./Pages/Shared/Footer/Footer";
 function App() {
   return (
     <AuthProvider>
@@ -62,6 +63,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </AuthProvider>
   );

@@ -2,13 +2,14 @@ import React from "react";
 import { Col, FloatingLabel, Form, Row } from "react-bootstrap";
 import Navigation from "../Shared/Navigation/Navigation";
 import "./Contact.css";
+import Map from "./Map/Map";
 
 const Contact = () => {
   return (
     <div>
       <Navigation />
       <div className="container contact">
-        <div className="row">
+        <div className="row py-5">
           <div className="col-md-5">
             <div className="contact-text">
               <div className="contact-info">
@@ -70,6 +71,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Map />
     </div>
   );
 };

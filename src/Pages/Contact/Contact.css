@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .contact-text{
     background: rgba(240, 238, 238, 0.89);
@@ -12,3 +13,8 @@
 .contact-info p{
     font-weight: 500;
 }
+/* @media only screen and (max-width: 600px) {
+    .contact{
+        padding-top: 100px;
+    }
+} */
