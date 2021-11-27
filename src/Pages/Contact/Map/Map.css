@@ -5,20 +5,20 @@
     left: 0%;
     top: 90%;
 }
-.map{
+.map {
      margin-bottom: 300px;
-}
+  }
 @media only screen and (max-width: 600px) {
     #map {
     top: 100%;
-}
+   }
 }
 @media only screen and (max-width: 400px) {
     #map {
-        position: absolute;
+    position: absolute;
     top: 113%;
-}
-.map{
+  }
+  .map {
     padding-top: 100px;
-}
+  }
 }

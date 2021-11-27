@@ -55,7 +55,7 @@ const Offer = () => {
           </div>
           <div className="col-md-6">
             <div className="right-side-text">
-              <h1>OFFER OF THE WEEK</h1>
+              <h1 className="pt-3">OFFER OF THE WEEK</h1>
               <h4 className="pt-5">Welcome To Roadie Bicycles Store 20% off</h4>
               <h3 className="pb-2">Hurry ! Don’t miss it</h3>
               <div className="timer d-flex align-items-center ">

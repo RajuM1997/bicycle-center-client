@@ -20,8 +20,8 @@ body{
     padding: 0 10px;
     color: #fff;
 }
-.banner-text h1{
-    font-size: 3.3rem;
+.banner h1{
+    font-size: 3.5rem;
 }
 .Typewriter__wrapper{
     text-align: center;
@@ -29,6 +29,15 @@ body{
     color: crimson;
    font-family: 'Oswald', sans-serif;
     font-weight: 500;
+    margin-top: 10px;
+}
+.Typewriter__cursor{
+    text-align: center;
+    text-transform: uppercase;
+    color: crimson;
+    font-weight: 500;
+    position: absolute;
+    top: 63px;
 }
 .bicycle{
     font-weight: 700;
@@ -73,7 +82,21 @@ body{
     height: 180%;
 }
 @media only screen and (max-width: 600px) {
-    .for{
+    .for {
         text-align: center !important;
+    }
+    .banner h1 {
+            font-size: 1.9rem;
+        }
+    .Typewriter__cursor {
+         position: absolute;
+         top: 30px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .Typewriter__cursor{
+         position: absolute;
+         top: 33px;
+         
     }
 }

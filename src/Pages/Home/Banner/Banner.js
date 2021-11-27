@@ -12,7 +12,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <div className="banner-text animate__animated animate__backInLeft">
-        <h1 className="">
+        <h1 className="text-center">
           Best <span className="bicycle">Bicycle</span>
           <span className="text-center ps-2 me-2">For</span>
           <div className="text-center">

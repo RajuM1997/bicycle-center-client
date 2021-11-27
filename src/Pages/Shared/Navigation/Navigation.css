@@ -13,6 +13,19 @@ body{
     height: 60px;
     object-fit: cover;
 }
+.login-or-signup .login-btn{
+    background: crimson;
+    padding: 6px 25px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    outline: none;
+    transition: all 0.5s;
+}
+.login-or-signup .login-btn:hover{
+    background: transparent;
+    border: 2px solid rgb(11, 2, 138);
+}
 
 .custome-bg {
     background: rgba(0, 0, 0, 0.945);

@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <div className="col-md-3">
             <div className="service">
-              <h4 className="fotter-title pb-3">Services</h4>
+              <h4 className="fotter-title pb-2">Services</h4>
               <h6>Free shipping</h6>
               <h6>Product Delivery</h6>
               <h6>Product Tracking</h6>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
           <div className="col-md-3">
             <div className="service">
-              <h4 className="fotter-title pb-3">Support</h4>
+              <h4 className="fotter-title pb-2">Support</h4>
               <h6>Quality</h6>
               <h6>Order Details</h6>
               <h6>Order Slips</h6>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           <div className="col-md-3">
             <div className="service">
-              <h4 className="fotter-title pb-3">Account</h4>
+              <h4 className="fotter-title pb-2">Account</h4>
               <h6>My account</h6>
               <h6>Order history</h6>
               <h6>Wisheslist</h6>

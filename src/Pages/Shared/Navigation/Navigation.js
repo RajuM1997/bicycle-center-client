@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -50,15 +49,15 @@ const Navigation = () => {
           {!user?.email ? (
             <Nav.Link as={Link} to="/login">
               <div className="login-or-signup">
-                <Button className="login-btn">Log In</Button>
+                <button className="login-btn">Log In</button>
               </div>
             </Nav.Link>
           ) : (
             <Nav.Link as={Link} to="/login">
               <div className="login-or-signup">
-                <Button onClick={handleLogOut} className="login-btn">
+                <button onClick={handleLogOut} className="login-btn">
                   Log Out
-                </Button>
+                </button>
               </div>
             </Nav.Link>
           )}

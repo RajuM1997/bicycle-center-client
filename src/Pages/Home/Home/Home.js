@@ -16,7 +16,6 @@ const Home = () => {
       <Offer />
       <Team />
       <Review />
-      <Footer />
     </div>
   );
 };

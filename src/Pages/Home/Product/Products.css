@@ -1,32 +1,50 @@
 .card {
     max-height: 700px;
-    border: none;
+    border: none !important;
 }
 .product .card {
    
-    transition: all 0.5s;
+    transition: all 0.3s;
     cursor: pointer;
 }
-/* 
-.product .card:hover {
-    border: 1px solid #ddd;
-    outline: none;
-} */
-.card-img{
+.card-img {
     width: 100%;
     height: 250px;
     overflow: hidden;
+    position: relative;
 }
 
-.card-img img{
+.card-img img {
     width: 100%;
     height: 100%;
     border: none;
     object-fit: contain;
     transition: all 0.5s ease-in-out;
 }
-.card-img img:hover{
+.card-img img:hover {
     transform: scale(1.1);
+}
+.card .panel {
+    position: absolute;
+    top: 15px;
+    right: -10%;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.card .panel .fas {
+    text-decoration: none;
+    font-size: 20px;
+    color: crimson;
+    margin: 15px 0;
+}
+
+.card:hover .panel {
+    right: 15px;
+    opacity: 1;
 }
 
 .card-footer {

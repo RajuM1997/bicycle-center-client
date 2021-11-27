@@ -10,7 +10,7 @@ import OrderPlace from "./Pages/OrderPlace/OrderPlace";
 import DashboardHome from "./Pages/Dashborad/DashboardHome/DashboardHome";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
-import News from "./Pages/News_News/News";
+import News from "./Pages/News/News";
 import Explore from "./Pages/Explore/Explore";
 import Update from "./Pages/Dashborad/MangeProduct/Update/Update";
 import NotFound from "./Pages/NotFound/NotFound";
