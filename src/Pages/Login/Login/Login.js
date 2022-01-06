@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import { Container, Form } from "react-bootstrap";
-import { useHistory, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import "./Login.css";
@@ -18,10 +18,9 @@ const Login = () => {
     saveUser,
   } = useAuth();
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
-
-  const url = location.state?.from || "/home";
+  const from = location.state?.from?.pathname || "/";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,7 +41,7 @@ const Login = () => {
         swal("Good job!", "LogIn successfull", "success");
         setIsLoading(true);
         setUser(res.user);
-        history.push(url);
+        navigate(from, { replace: true });
         // ...
       })
       .catch((error) => {
@@ -56,12 +55,12 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((res) => {
-        swal("Good job!", "LogOut successfull", "success");
+        swal("Good job!", "Login successfull", "success");
         setIsLoading(true);
         const user = res.user;
         console.log(user);
         saveUser(user.email, user.displayName, "put");
-        history.push(url);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);

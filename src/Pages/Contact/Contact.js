@@ -64,7 +64,7 @@ const Contact = () => {
                   style={{ height: "100px" }}
                 />
               </FloatingLabel>
-              <div className="pt-3">
+              <div className="pt-3 w-100">
                 <button className="common-btn">Submit</button>
               </div>
             </Row>

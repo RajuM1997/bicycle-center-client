@@ -8,7 +8,7 @@ import logo from "../../../logo/logo.png";
 const Navigation = () => {
   const { user, handleLogOut } = useAuth();
   return (
-    <Navbar className="custome-bg" variant="dark" expand="lg" fixed="top">
+    <Navbar className="custome-bg w-100" variant="dark" expand="lg" fixed="top">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img className="logo_img pe-2" src={logo} alt="" />

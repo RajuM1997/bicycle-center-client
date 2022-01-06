@@ -15,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     clip-path: circle(180vh at 50% -80vh);
+    z-index: -1;
 }
 .banner-text{
     padding: 0 10px;

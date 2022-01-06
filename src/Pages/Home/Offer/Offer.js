@@ -42,7 +42,7 @@ const Offer = () => {
   return (
     <div className="py-5">
       <div className="container">
-        <div className="row d-flex justify-content-center align-items-center pb-5">
+        <div className="row mx-auto d-flex justify-content-center align-items-center pb-5">
           <div className="col-md-6">
             <div className="left-side-img">
               <img

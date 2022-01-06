@@ -32,11 +32,11 @@ const Product = () => {
                         alt=""
                       />
                     </div>
-                    <div class="panel">
+                    {/* <div class="panel">
                       <i class="fas fa-heart"></i>
                       <i class="fas fa-share-alt"></i>
                       <i class="fas fa-search"></i>
-                    </div>
+                    </div> */}
                     <Card.Body>
                       <Card.Title>{items.title}</Card.Title>
                     </Card.Body>

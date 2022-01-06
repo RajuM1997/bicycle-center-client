@@ -1,26 +1,16 @@
 import React from "react";
 import useAuth from "../../../Hooks/useAuth";
 import "./Dashboard.css";
-import { Switch, Route, NavLink, useRouteMatch } from "react-router-dom";
-import DashboardHome from "../DashboardHome/DashboardHome";
-import MakeAdmin from "../MakeAdmin/MakeAdmin";
-import AddProduct from "../AddProduct/AddProduct";
-import AllOrder from "../AllOrder/AllOrder";
-import MyOrder from "../MyOrder/MyOrder";
-import Review from "../Review/Review";
-import Payment from "../Payment/Payment";
-import MangeProduct from "../MangeProduct/MangeProduct";
-import MangeOrder from "../MangeOrder/MangeOrder";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   const { user, handleLogOut, admin } = useAuth();
-  let { path, url } = useRouteMatch();
   return (
     <div className="">
       <div className="dashboard">
         <div className="admin-box">
-          <div className="row">
-            <div className="col-md-3">
+          <div className="row g-0 w-100">
+            <div className="col-md-3 col-sm-12">
               <div className="bashboard-manu p-1">
                 <div className="all-menu mt-5">
                   {/* user profile start here */}
@@ -47,7 +37,7 @@ const Dashboard = () => {
                           color: "#fff",
                           background: "none",
                         }}
-                        to={`${url}`}
+                        to="/dashboard"
                       >
                         Dashboard
                       </NavLink>
@@ -73,25 +63,6 @@ const Dashboard = () => {
                   {admin && (
                     <div className="all-order">
                       <div className="icon pe-3">
-                        <i className="fas fa-shopping-cart"></i>
-                      </div>
-                      <li className="admin-menu p-2">
-                        <NavLink
-                          style={{
-                            textDecoration: "none",
-                            color: "#fff",
-                            background: "none",
-                          }}
-                          to={`${url}/myOrder`}
-                        >
-                          All Order
-                        </NavLink>
-                      </li>
-                    </div>
-                  )}
-                  {admin && (
-                    <div className="all-order">
-                      <div className="icon pe-3">
                         <i className="fas fa-baby-carriage"></i>
                       </div>
                       <li className="admin-menu p-2">
@@ -101,7 +72,7 @@ const Dashboard = () => {
                             color: "#fff",
                             background: "none",
                           }}
-                          to={`${url}/addProduct`}
+                          to={`/dashboard/addProduct`}
                         >
                           Add Product
                         </NavLink>
@@ -119,7 +90,7 @@ const Dashboard = () => {
                           color: "#fff",
                           background: "none",
                         }}
-                        to={`${url}/myOrder`}
+                        to={`/dashboard/myOrder`}
                       >
                         My Order
                       </NavLink>
@@ -137,7 +108,7 @@ const Dashboard = () => {
                             color: "#fff",
                             background: "none",
                           }}
-                          to={`${url}/makeAdmin`}
+                          to={`/dashboard/makeAdmin`}
                         >
                           Make Admin
                         </NavLink>
@@ -156,7 +127,7 @@ const Dashboard = () => {
                             color: "#fff",
                             background: "none",
                           }}
-                          to={`${url}/mangeOrder`}
+                          to={`/dashboard/mangeOrder`}
                         >
                           Mange Order
                         </NavLink>
@@ -175,7 +146,7 @@ const Dashboard = () => {
                             color: "#fff",
                             background: "none",
                           }}
-                          to={`${url}/mangeProduct`}
+                          to={`/dashboard/mangeProduct`}
                         >
                           Mange Product
                         </NavLink>
@@ -193,7 +164,7 @@ const Dashboard = () => {
                           color: "#fff",
                           background: "none",
                         }}
-                        to={`${url}/review`}
+                        to={`/dashboard/review`}
                       >
                         Review
                       </NavLink>
@@ -210,7 +181,7 @@ const Dashboard = () => {
                           color: "#fff",
                           background: "none",
                         }}
-                        to={`${url}/payment`}
+                        to={`/dashboard/payment`}
                       >
                         Payment
                       </NavLink>
@@ -219,36 +190,8 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-9">
-              <Switch>
-                <Route exact path={path}>
-                  <DashboardHome />
-                </Route>
-                <Route path={`${path}/addProduct`}>
-                  <AddProduct />
-                </Route>
-                <Route path={`${path}/allProduct`}>
-                  <AllOrder />
-                </Route>
-                <Route path={`${path}/myOrder`}>
-                  <MyOrder />
-                </Route>
-                <Route path={`${path}/makeAdmin`}>
-                  <MakeAdmin />
-                </Route>
-                <Route path={`${path}/mangeOrder`}>
-                  <MangeOrder />
-                </Route>
-                <Route path={`${path}/mangeProduct`}>
-                  <MangeProduct />
-                </Route>
-                <Route path={`${path}/review`}>
-                  <Review />
-                </Route>
-                <Route path={`${path}/payment`}>
-                  <Payment />
-                </Route>
-              </Switch>
+            <div className="col-md-9 col-sm-12">
+              <Outlet />
             </div>
           </div>
         </div>

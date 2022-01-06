@@ -5,7 +5,7 @@ const Team = () => {
     <div>
       <div className="container pb-5">
         <h1 className="text-center pb-5">Meet Our Team</h1>
-        <div className="row">
+        <div className="row w-100 mx-auto">
           <div className="col-md-4 pb-4">
             <div className="card h-100 ">
               <img

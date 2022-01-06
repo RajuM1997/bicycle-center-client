@@ -1,11 +1,12 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
-import { Redirect, Route } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import "./PrivateRoute.css";
 
 const PrivateRoute = ({ children, ...rest }) => {
   const { user, isLoading } = useAuth();
+  let location = useLocation();
 
   if (isLoading) {
     return (
@@ -15,25 +16,10 @@ const PrivateRoute = ({ children, ...rest }) => {
     );
   }
 
-  return (
-    <div>
-      <Route
-        {...rest}
-        render={({ location }) =>
-          user.email ? (
-            children
-          ) : (
-            <Redirect
-              to={{
-                pathname: "/login",
-                state: { from: location },
-              }}
-            ></Redirect>
-          )
-        }
-      ></Route>
-    </div>
-  );
+  if (!user.email) {
+    return <Navigate to="/login" state={{ from: location }} />;
+  }
+  return children;
 };
 
 export default PrivateRoute;

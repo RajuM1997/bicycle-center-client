@@ -16,14 +16,14 @@ const Banner = () => {
           Best <span className="bicycle">Bicycle</span>
           <span className="text-center ps-2 me-2">For</span>
           <div className="text-center">
-            <Typewriter
+            {/* <Typewriter
               options={{
                 autoStart: true,
                 loop: true,
                 delay: 50,
                 strings: ["Man", "Woman", "Children"],
               }}
-            ></Typewriter>
+            ></Typewriter> */}
           </div>
         </h1>
         <p className="text-center py-3">

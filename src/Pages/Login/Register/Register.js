@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import { Container, Form } from "react-bootstrap";
-import { useHistory, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import swal from "sweetalert";
@@ -18,7 +18,7 @@ const Register = () => {
     saveUser,
   } = useAuth();
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
   const url = location.state?.from || "/home";
 
@@ -46,7 +46,7 @@ const Register = () => {
         setIsLoading(true);
         createUserName(email, name);
         setUser(res.user);
-        history.push(url);
+        navigate(url, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
@@ -63,7 +63,7 @@ const Register = () => {
         const user = res.user;
         console.log(user);
         saveUser(user.email, user.displayName, "put");
-        history.push(url);
+        navigate("/home");
       })
       .catch((error) => {
         setError(error.message);
